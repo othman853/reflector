@@ -10,7 +10,7 @@
 	<scm>
 		<connection>scm:git:ssh://github.com/mikhas-rock/${artifactId}.git</connection>
 		<developerConnection>scm:git:ssh://git@github.com/mikhas-rock/${artifactId}.git</developerConnection>
-		<url>http://github.com/amleggett/${artifactId}</url>
+		<url>http://github.com/mikhas-rock/${artifactId}</url>
 	</scm>
 
 	<issueManagement>
