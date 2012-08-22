@@ -1,19 +1,28 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>br.mikhas</groupId>
-  <artifactId>mikhas-reflector</artifactId>
-  <name>reflector</name>
-  <version>1.7.0</version>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>br.mikhas</groupId>
+	<artifactId>reflector</artifactId>
+	<name>reflector</name>
+	<version>1.7.0-SNAPSHOT</version>
 
-  <description>Easy reflection framework</description>
-  <scm>
-  	<connection>SVN</connection>
-  	<developerConnection>Mikhail Domanoski</developerConnection>
-  	<tag>1.5.0</tag>
-  	<url>http://mikhas.googlecode.com/svn/</url>
-  </scm>
-  <build>
+	<description>Easy reflection framework</description>
+	<scm>
+		<connection>scm:git:git://github.com/mikhas-rock/reflector.git</connection>
+		<url>git://github.com/mikhas-rock/reflector.git</url>
+	</scm>
+
+	<issueManagement>
+		<url>http://github.com/mikhas-rock/reflector/issues</url>
+	</issueManagement>
+
+	<build>
+		<finalName>${project.artifactId}-${project.version}</finalName>
 		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+			</plugin>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
@@ -24,28 +33,6 @@
 					<showDeprecation>true</showDeprecation>
 				</configuration>
 			</plugin>
-			
-			<plugin>
-		        <artifactId>maven-assembly-plugin</artifactId>
-		        <version>2.2</version>
-		        <configuration>
-		        	<descriptorRefs>
-		        		<descriptorRef>jar-with-dependencies</descriptorRef>
-		        	</descriptorRefs>
-		        </configuration>
-		        
-		        <executions>
-		        	<execution>
-		        		<id>make-assembly</id> <!-- this is used for inheritance merges -->
-						<phase>package</phase> <!-- append to the packaging phase. -->
-						
-						<goals>
-							<goal>single</goal> <!-- goals == mojos -->
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-source-plugin</artifactId>
@@ -59,7 +46,6 @@
 					</execution>
 				</executions>
 			</plugin>
-			
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
@@ -73,14 +59,13 @@
 					</execution>
 				</executions>
 			</plugin>
-    
 		</plugins>
 	</build>
-	
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
-	
+
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
@@ -88,7 +73,7 @@
 			<version>4.8.2</version>
 			<scope>test</scope>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.javassist</groupId>
 			<artifactId>javassist</artifactId>
@@ -96,7 +81,7 @@
 			<scope>compile</scope>
 			<optional>true</optional>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>net.vidageek</groupId>
 			<artifactId>mirror</artifactId>
@@ -104,4 +89,12 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+
+	<distributionManagement>
+		<repository>
+			<id>mikhas</id>
+			<url>https://mikhas.googlecode.com/svn/maven2</url>
+		</repository>
+	</distributionManagement>
+
 </project>
