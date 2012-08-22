@@ -4,13 +4,13 @@
 	<groupId>br.mikhas</groupId>
 	<artifactId>reflector</artifactId>
 	<name>reflector</name>
-	<version>1.7.0</version>
+	<version>1.7.0-SNAPSHOT</version>
 
 	<description>Easy reflection framework</description>
 	<scm>
-		<connection>scm:git:ssh://github.com/mikhas-rock/${artifactId}.git</connection>
-		<developerConnection>scm:git:ssh://git@github.com/mikhas-rock/${artifactId}.git</developerConnection>
-		<url>http://github.com/mikhas-rock/${artifactId}</url>
+		<connection>scm:git:ssh://github.com/mikhas-rock/${project.artifactId}.git</connection>
+		<developerConnection>scm:git:ssh://git@github.com/mikhas-rock/${project.artifactId}.git</developerConnection>
+		<url>http://github.com/mikhas-rock/${project.artifactId}</url>
 	</scm>
 
 	<issueManagement>
