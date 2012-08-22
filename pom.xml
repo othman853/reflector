@@ -3,7 +3,7 @@
 	<groupId>br.mikhas</groupId>
 	<artifactId>reflector</artifactId>
 	<name>reflector</name>
-	<version>1.7.0</version>
+	<version>1.7.1-SNAPSHOT</version>
 
 	<description>Easy reflection framework</description>
 	<scm>
