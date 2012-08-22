@@ -8,8 +8,8 @@
 
 	<description>Easy reflection framework</description>
 	<scm>
-		<connection>scm:git:git://github.com/mikhas-rock/reflector.git</connection>
-		<url>git://github.com/mikhas-rock/reflector.git</url>
+		<connection>scm:git:git://github.com:mikhas-rock/reflector.git</connection>
+		<url>git://github.com:mikhas-rock/reflector.git</url>
 	</scm>
 
 	<issueManagement>
